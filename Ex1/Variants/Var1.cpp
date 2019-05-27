@@ -12,5 +12,16 @@ using namespace std;
 
 void var1()
 {
-    //Здесь должен быть ваш код
+    Mat image;
+    image = imread("../Lenna.png");
+
+    putText(image, "sh-sergey", Point(100, 100), FONT_HERSHEY_SIMPLEX, 1.0, Scalar(0, 255, 0), 3);
+    circle(image, Point(200, 200), 40, Scalar(0, 255, 0), 4);
+
+    namedWindow("Original Image", CV_WINDOW_AUTOSIZE);
+    imshow("Original Image", image);
+
+    imwrite("../Var1.png", image);
+
+    waitKey(0);
 } 
