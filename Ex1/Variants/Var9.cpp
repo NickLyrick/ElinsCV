@@ -27,8 +27,8 @@ void var9()
         (img,Point(320,480),Scalar(139,0,139),MARKER_DIAMOND,22,4);
         
 	    // отображаем в окне
-		namedWindow("Gip-gip :)", CV_WINDOW_AUTOSIZE);
-		imshow("Gip-gip :)",img);
+		namedWindow("Hi :)", CV_WINDOW_AUTOSIZE);
+		imshow("Hi :)",img);
 
         //Сохраняю
         imwrite("Var9.png",img);
