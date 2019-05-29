@@ -10,28 +10,29 @@ using namespace std;
 
 void var9()
 {
-    
-    //Mat img = imread("Lenna.png");
-    //putText
-        //( img,   "Pleshko Lizaveta" ,  Point(img.cols/4,img.rows/4*3), FONT_HERSHEY_SIMPLEX, 3,Scalar(0,255,0),2);
-          
-          //fontScale, blue, thickness = 3, lineType = LINE_8, bottomLeftOrigin = false
+        Mat img = imread("Lenna.png");
+
+	    // Добавила текст
+	    putText(img,"Elizaveta",Point(180,450),FONT_HERSHEY_SCRIPT_COMPLEX,2.5,Scalar(254,20,200),3);
+
+	   // Добавила маркеры
         
-    //namedWindow("Display");
-    //imshow("Display",img);
-    
-    Mat img = imread("Lenna.png");
+        drawMarker
+        (img,Point(260,480),Scalar(139,0,139),MARKER_DIAMOND,22,4);
 
-	    // Добавляем текст
-	    putText(img,"yaskovMC",Point(img.cols/4,img.rows/4*3),FONT_HERSHEY_PLAIN,3,Scalar(0,255,0),2);
-
-	   
-
+        drawMarker
+        (img,Point(290,480),Scalar(139,0,139),MARKER_DIAMOND,22,4);
+        
+        drawMarker
+        (img,Point(320,480),Scalar(139,0,139),MARKER_DIAMOND,22,4);
+        
 	    // отображаем в окне
-		namedWindow("Display", CV_WINDOW_AUTOSIZE);
-		imshow("Display",img);
+		namedWindow("Gip-gip :)", CV_WINDOW_AUTOSIZE);
+		imshow("Gip-gip :)",img);
 
-
+        //Сохраняю
+        imwrite("Var9.png",img);
+        
 		waitKey(0);	
     
 } 
